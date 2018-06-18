@@ -20,21 +20,18 @@ const requestComplete = function(){
   if (this.status !== 200) return;
   const book = JSON.parse(this.response);
   console.log(book);
-  // let book_author =
-  // console.log(book_author);
-
-
-
+  let book_author = book
+  console.log(book_author);
   // makeBookRequest(deck_id, cardRequestComplete);
 }
 
-const makeBookRequest = function(book_author, callback){
-  const url =
-  const request = new XMLHttpRequest();
-  request.open("GET", url);
-  request.addEventListener("load", callback);
-  request.send();
-}
+// const makeBookRequest = function(book_author, callback){
+//   const url =
+//   const request = new XMLHttpRequest();
+//   request.open("GET", url);
+//   request.addEventListener("load", callback);
+//   request.send();
+// }
 
 const bookRequestComplete = function(){
   if (this.status !== 200) return;
