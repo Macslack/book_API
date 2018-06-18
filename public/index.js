@@ -20,16 +20,16 @@ const requestComplete = function(){
   if (this.status !== 200) return;
   const book = JSON.parse(this.response);
   console.log(book);
-  let book_author =
-  console.log(book_author);
+  // let book_author =
+  // console.log(book_author);
 
 
 
   // makeBookRequest(deck_id, cardRequestComplete);
 }
 
-const makeBookRequest = function(deck_id, callback){
-  const url = 
+const makeBookRequest = function(book_author, callback){
+  const url =
   const request = new XMLHttpRequest();
   request.open("GET", url);
   request.addEventListener("load", callback);
@@ -39,7 +39,7 @@ const makeBookRequest = function(deck_id, callback){
 const bookRequestComplete = function(){
   if (this.status !== 200) return;
   const cards = JSON.parse(this.response);
-  populateList(cards)
+  populateList(books)
 
 }
 
